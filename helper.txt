@@ -1,0 +1,5 @@
+POUR BUILD UNE IMAGE DOCKER
+docker build -t nom_de_l_image /path/du/dirdudockerfile
+
+POUR RESTART DOCKER
+systemctl restart docker
