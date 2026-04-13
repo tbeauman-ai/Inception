@@ -38,19 +38,7 @@ services:
 
 volumes:
   db_data:
-    name: db_data
-    driver: local
-    driver_opts:
-      type: none
-      device: /home/tbeauman/data/db_data
-      o: bind
   wp_data:
-    name: wp_data
-    driver: local
-    driver_opts:
-      type: none
-      device: /home/tbeauman/data/wp_data
-      o: bind
 
 networks:
   inception:
