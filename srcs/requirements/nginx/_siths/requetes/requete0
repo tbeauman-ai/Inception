@@ -1,0 +1,4 @@
+GET /assets/ziziprout.html HTTP/1.0
+Content-Length: 5
+
+salut

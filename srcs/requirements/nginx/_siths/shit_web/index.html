@@ -1,0 +1,39 @@
+<html>
+    <head>
+            <meta charset="utf-8">
+    </head>
+    <style>
+        body {
+            background-image: url("/images/shit.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+
+    <h1>Bienvenue sur notre Shit Web 💩 ! Ptdr !!</h1>
+    <div id="filelist"></div>
+
+    <script>
+    async function loadFiles() {
+        const res = await fetch("/cgi-bin/ls.sh");
+        const files = await res.json();
+        const div = document.getElementById("filelist");
+        div.innerHTML = files.map(f => `
+            <p>${f} <button onclick="deleteFile('${f}')">🗑 Supprimer</button></p>
+        `).join("");
+    }
+    async function deleteFile(filename) {
+        const res = await fetch("/shit_files/" + filename, { method: "DELETE" });
+        if (res.ok) {
+            alert("Supprimé : " + filename);
+            loadFiles();
+        } else {
+            alert("Erreur " + res.status);
+        }
+    }
+
+    loadFiles();
+</script>
+</html>

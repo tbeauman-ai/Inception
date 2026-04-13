@@ -1,0 +1,2 @@
+GET /cgi-bin/script.py HTTP/1.0
+

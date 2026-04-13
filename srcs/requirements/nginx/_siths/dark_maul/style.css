@@ -1,0 +1,13 @@
+body {
+    background-image: url("/images/dark_maul2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: rgb(239, 243, 0);
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 50px;
+}

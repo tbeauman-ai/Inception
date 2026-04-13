@@ -9,6 +9,7 @@ RUN mkdir -p /etc/nginx/ssl && \
     -subj "/CN=localhost"
 
 COPY conf/nginx.conf /etc/nginx/http.d/default.conf
+# COPY conf/_siths /var/www/_siths
 RUN chmod +x /etc/nginx/http.d/default.conf
 
 EXPOSE 443

@@ -1,0 +1,2 @@
+GET /cgi_bin/path_info.py/hello/world HTTP/1.0
+
